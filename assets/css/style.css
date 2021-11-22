@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    color: navy;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* HEADER / NAV BAR STYLES START */
+header {
+    padding: 20px 35px;
+    background-color:rgb(176, 235, 176); 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+  }
+  
+  header h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 36px;
+    color: var(--primary-color);
+  }
+  
+  header h1 a {
+    text-decoration: underline;
+    color: navy;
+    text-decoration-style: double;
+  }
+  
+  header nav {
+    margin: 7px 0;
+  }
+  
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
+  }
+  
+  header nav ul li a:hover {
+    background: turquoise;
+    color: black;
+    border-radius: 15px;
+    text-shadow: none;
+  }
+  /* HEADER / NAVBAR STYLES END */
+
+/* Space for BG pic styles */
+.hero {
+    background-image: url("../images/microchip.jpg");
+    opacity: .7;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+  }
+  
+  .hero-cta {
+    width: 35%;
+    text-align: center;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.2;
+    text-shadow:rgba(0, 0, 0, 0.5); 
+  }
+  
+  .hero-cta h2 {
+    font-style: italic;
+    font-size: 55px;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+/* End Space for BG pic styles */
+
+/* About Me */
+.section-title {
+    font-size: 48px;
+    border-bottom: 3px solid;
+    color: var(--secondary-color);
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
+  }
+  
+  .primary-border {
+    border-color: var(--primary-color);
+  }
+
+.flex-row {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+  }
+/* End About Me */  
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+aside {
+  flex: 1;
+  background-color: #b9c6ae;
+  padding: 80px;
+  text-align: center;
+}
+
+/* start work section */  
+
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+  margin: 10px;
+  transition: all .5s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 9998;
+}
+
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+ 
+.card img {
+  float: none;
+  max-height: 17vw;
+  min-height: 17vw;
+  max-width:32vw;
+  min-width: 32vw;
+}
+
+/* end work section */ 
+
+/* Contact Info */
+.contact {
+    background: var(--secondary-color);
+  }
+  
+  .contact h2 {
+    color: var(--primary-color);
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .contact-info > * {
+    flex: 1;
+    margin: 15px;
+  }
+
+  .contact-info p, .contact-info address {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-style: normal;
+  }
+/* End Contact Info */
+
+@media screen and (max-width: 376px) {
+  #About-Me > div > p {
+    padding-left: 10px;
+  }
+  .card {
+    flex: 0 0 375px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 940px) {
+  .card {
+    flex: 0 0 100vw;
+  }
+}
